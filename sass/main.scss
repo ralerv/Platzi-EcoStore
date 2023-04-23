@@ -1,6 +1,7 @@
 $primary-color:#FFEFE7;
 $secundary-color:#FFDAC6;
 $tertiary-color:#BABD8D;
+$additional-color: #FA9500;
 $primary-text-color:#7C6A0A;
 $font-stackl: 'IBM Plex Sans' , sans-serif;
 
@@ -8,4 +9,20 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.navbar {
+    background-color: $primary-color;
+    width: 100%;
+    height: 1s00px;
+}
+
+.main {
+    background-color: $primary-color;
+}
+
+.footer {
+    background-color: $additional-color;
+    width: 100%;
+    height: 250px;
 }
