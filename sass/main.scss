@@ -9,16 +9,42 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-stackl;
+    background-color: $primary-color;
 }
 
 .navbar {
-    background-color: $primary-color;
-    width: 100%;
-    height: 1s00px;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary-text-color;
+    padding: 0 30px;
+    p {
+        margin: 0;
+        font-size: 1.5em;
+    }
+    .icons {
+        display: flex;
+        gap: 12px;
+        button {
+            border: none;
+            background: none;
+            svg{
+                width: 36px;
+                height: 36px;
+                path{
+                    stroke: $primary-text-color;
+                }
+                
+            }
+        }
+    }
 }
 
 .main {
-    background-color: $primary-color;
+    
 }
 
 .footer {
