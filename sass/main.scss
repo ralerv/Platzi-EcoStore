@@ -85,6 +85,81 @@ body {
     }
 }
 
+section {
+    width: 100%;
+    height: auto;
+    h2 {
+        color: $primary-text-color;
+        font-size: 2em;
+    }
+    .healthcare {
+        padding-bottom: 72px;
+        h2 {
+            font-weight: 300;
+        }
+        .card-section {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(100px,1fr));
+            column-gap: 120px;
+            row-gap: 72px;
+            .product-card {
+                display: grid;
+                gap: 12px;
+                padding: 20px 40px;
+                border-radius: 8px;
+                background-color: $secundary-color;
+                button {
+                    justify-self: end;
+                    border: none;
+                    background: none;
+                    svg{
+                        width: 36px;
+                        height: 36px;
+                        path{
+                            stroke: $primary-text-color;
+                       }
+                    
+                    }
+                }
+                .product-image{
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-position: center;
+                        object-fit: cover;
+                        border-radius: 6px;
+                    }
+                }
+                
+                p, h3{
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+    .furniture{
+        @extend .healthcare;
+        .card-section{
+            .product-card{
+                background-color: $tertiary-color;
+                color: white;
+                button {
+                    svg{
+                        path{
+                            stroke: white;
+                       }
+                    
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
 .footer {
     background-color: $additional-color;
     width: 100%;
