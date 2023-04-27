@@ -6,6 +6,25 @@ $primary-text-color:#7C6A0A;
 $font-stackl: 'IBM Plex Sans' , sans-serif;
 $paragraph-size: 1.5em;
 
+@mixin buttonstyle($color: null){
+    button {
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        justify-self: end;
+        border: none;
+        background: none;
+        svg{
+            width: 36px;
+            height: 36px;
+            path{
+                stroke: $color;
+           }
+        
+        }
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -28,19 +47,8 @@ body {
     }
     .icons {
         display: flex;
-        gap: 12px;
-        button {
-            border: none;
-            background: none;
-            svg{
-                width: 36px;
-                height: 36px;
-                path{
-                    stroke: $primary-text-color;
-                }
-                
-            }
-        }
+        gap: 20px;
+        @include buttonstyle($primary-text-color);
     }
 }
 
@@ -100,27 +108,17 @@ section {
         .card-section {
             display: grid;
             grid-template-columns: repeat(3,minmax(100px,1fr));
+            grid-auto-rows: 540px;
             column-gap: 120px;
             row-gap: 72px;
             .product-card {
                 display: grid;
+                grid-template-rows: 32px 320px auto auto;
                 gap: 12px;
                 padding: 20px 40px;
                 border-radius: 8px;
                 background-color: $secundary-color;
-                button {
-                    justify-self: end;
-                    border: none;
-                    background: none;
-                    svg{
-                        width: 36px;
-                        height: 36px;
-                        path{
-                            stroke: $primary-text-color;
-                       }
-                    
-                    }
-                }
+                @include buttonstyle($primary-text-color);
                 .product-image{
                     width: 100%;
                     height: 100%;
@@ -146,14 +144,7 @@ section {
             .product-card{
                 background-color: $tertiary-color;
                 color: white;
-                button {
-                    svg{
-                        path{
-                            stroke: white;
-                       }
-                    
-                    }
-                }
+                @include buttonstyle(white);
             }
         }
         
