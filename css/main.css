@@ -88,20 +88,20 @@ section h2 {
   color: #7C6A0A;
   font-size: 2em;
 }
-section .healthcare, section .furniture {
+section .healthcare, section .about-us, section .furniture {
   padding-bottom: 72px;
 }
-section .healthcare h2, section .furniture h2 {
+section .healthcare h2, section .about-us h2, section .furniture h2 {
   font-weight: 300;
 }
-section .healthcare .card-section, section .furniture .card-section {
+section .healthcare .card-section, section .about-us .card-section, section .furniture .card-section {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   grid-auto-rows: 540px;
   column-gap: 120px;
   row-gap: 72px;
 }
-section .healthcare .card-section .product-card, section .furniture .card-section .product-card {
+section .healthcare .card-section .product-card, section .about-us .card-section .product-card, section .furniture .card-section .product-card {
   display: grid;
   grid-template-rows: 32px 320px auto auto;
   gap: 12px;
@@ -109,7 +109,7 @@ section .healthcare .card-section .product-card, section .furniture .card-sectio
   border-radius: 8px;
   background-color: #FFDAC6;
 }
-section .healthcare .card-section .product-card button, section .furniture .card-section .product-card button {
+section .healthcare .card-section .product-card button, section .about-us .card-section .product-card button, section .furniture .card-section .product-card button {
   padding: 0;
   width: 36px;
   height: 36px;
@@ -117,25 +117,25 @@ section .healthcare .card-section .product-card button, section .furniture .card
   border: none;
   background: none;
 }
-section .healthcare .card-section .product-card button svg, section .furniture .card-section .product-card button svg {
+section .healthcare .card-section .product-card button svg, section .about-us .card-section .product-card button svg, section .furniture .card-section .product-card button svg {
   width: 36px;
   height: 36px;
 }
-section .healthcare .card-section .product-card button svg path, section .furniture .card-section .product-card button svg path {
+section .healthcare .card-section .product-card button svg path, section .about-us .card-section .product-card button svg path, section .furniture .card-section .product-card button svg path {
   stroke: #7C6A0A;
 }
-section .healthcare .card-section .product-card .product-image, section .furniture .card-section .product-card .product-image {
+section .healthcare .card-section .product-card .product-image, section .about-us .card-section .product-card .product-image, section .furniture .card-section .product-card .product-image {
   width: 100%;
   height: 100%;
 }
-section .healthcare .card-section .product-card .product-image img, section .furniture .card-section .product-card .product-image img {
+section .healthcare .card-section .product-card .product-image img, section .about-us .card-section .product-card .product-image img, section .furniture .card-section .product-card .product-image img {
   width: 100%;
   height: 100%;
   object-position: center;
   object-fit: cover;
   border-radius: 6px;
 }
-section .healthcare .card-section .product-card p, section .furniture .card-section .product-card p, section .healthcare .card-section .product-card h3, section .furniture .card-section .product-card h3 {
+section .healthcare .card-section .product-card p, section .about-us .card-section .product-card p, section .furniture .card-section .product-card p, section .healthcare .card-section .product-card h3, section .about-us .card-section .product-card h3, section .furniture .card-section .product-card h3 {
   margin: 0;
 }
 section .furniture .card-section .product-card {
@@ -157,7 +157,29 @@ section .furniture .card-section .product-card button svg {
 section .furniture .card-section .product-card button svg path {
   stroke: white;
 }
-
+section .about-us h2 {
+  font-weight: bold;
+}
+section .about-us .mission-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+section .about-us .mission-section .earth, section .about-us .mission-section .innovation {
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+section .about-us .mission-section .earth img, section .about-us .mission-section .innovation img {
+  object-fit: contain;
+}
+section .about-us .mission-section .earth p, section .about-us .mission-section .innovation p {
+  text-align: center;
+  color: #FA9500;
+  font-size: 1.5em;
+}
 .footer {
   background-color: #FA9500;
   width: 100%;

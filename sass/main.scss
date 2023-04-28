@@ -149,7 +149,38 @@ section {
         }
         
     }
+    .about-us {
+        @extend .healthcare;
+        h2{
+            font-weight: bold;
+        }
+        .mission-section{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            .earth{
+                max-width: 50%;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                img{
+                    object-fit: contain;
+                }
+                p{
+                    text-align: center;
+                    color: $additional-color;
+                    font-size: $paragraph-size;
+                }
+            }
+            .innovation{
+                @extend .earth;
+            }
+        }
+    }
 }
+
+
 
 .footer {
     background-color: $additional-color;
