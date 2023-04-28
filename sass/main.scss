@@ -83,6 +83,10 @@ body {
             border-radius: 35px;
             color: $primary-color;
             background-color: $additional-color;
+            transition: transform 0.2s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
         img{
             justify-self: end;
@@ -175,6 +179,27 @@ section {
             }
             .innovation{
                 @extend .earth;
+            }
+        }
+    }
+}
+
+.gallery{
+    @extend .about-us;
+    &-images{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        img{
+            aspect-ratio: 1/1;
+            height: 100%;
+            width: 30%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+            transition: transform 0.2s;
+            &:hover{
+                transform: scale(1.1);
             }
         }
     }
