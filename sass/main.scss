@@ -113,7 +113,7 @@ section {
             display: grid;
             grid-template-columns: repeat(3,minmax(100px,1fr));
             grid-auto-rows: 540px;
-            column-gap: 120px;
+            column-gap: 10%;
             row-gap: 72px;
             .product-card {
                 display: grid;
@@ -209,6 +209,10 @@ section {
     .map{
         img{
             border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
     h3,p{
@@ -238,5 +242,78 @@ section {
         gap: 36px;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width:1023px){
+    .navbar{
+        padding: 0 4%;
+    }
+    .main {
+        padding: 0 4%;
+        article {
+            grid-template-columns: auto;
+            .image-section{
+                width: 100%;
+                img{
+                    margin-top: 12px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    section {
+        width: 100%;
+        height: auto;
+        h2 {
+            color: $primary-text-color;
+            font-size: 2em;
+        }
+        .healthcare {
+            .card-section {
+                column-gap: 8px;
+                grid-auto-flow: column;
+                grid-template-columns: 92%;
+                grid-auto-columns: 92%;
+                grid-auto-rows: auto;
+                scrollbar-width: none;
+                overflow-x: scroll;
+                overscroll-behavior-x: contain;
+                scroll-snap-type: x proximity;
+                .product-card{
+                    scroll-snap-align: center;
+                    padding: 12% 8%;
+                }
+            }
+        }
+        .about-us {
+            .mission-section{
+                flex-direction: column;
+                .earth {
+                    max-width: 100%;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    .location{
+        .map{
+            width: 100%;
+            height: 80vh;
+        }
+    }
+
+    .gallery{
+        &-images{
+            flex-direction: column;
+            gap: 20px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .footer {
+        padding: 4% 4%;
     }
 }
